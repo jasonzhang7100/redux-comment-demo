@@ -6,19 +6,19 @@ import './comment-add.css'
 
 const { TextArea } = Input
 
-class AddComment extends React.Component {
+class CommentAdd extends React.Component {
   constructor(props) {
     super(props)
     this.state = { user: '', content: '' }
     this.handleUserChange = this.handleUserChange.bind(this)
     this.handleContentChange = this.handleContentChange.bind(this)
-    this.addComment = this.addComment.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  addComment() {
+  handleClick() {
     const comment = this.state
     if (!(comment.user && comment.content)) { return }
-    this.props.changeComments(comment)
+    this.props.addComment(comment)
     this.setState({ user: '', content: '' })
   }
 
@@ -51,14 +51,14 @@ class AddComment extends React.Component {
             placeholder="Please input your comment"
           />
         </div>
-        <Button type="primary" onClick={this.addComment}>Add Comment</Button>
+        <Button type="primary" onClick={this.handleClick}>Add Comment</Button>
       </div>
     )
   }
 }
 
-AddComment.propTypes = {
-  changeComments: PropTypes.func.isRequired
+CommentAdd.propTypes = {
+  addComment: PropTypes.func.isRequired
 }
 
-export default AddComment
+export default CommentAdd
