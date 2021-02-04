@@ -11,9 +11,9 @@ class CommentItem extends React.Component {
   }
 
   handleDelete() {
-    const { comment, index, deleteComments } = this.props
+    const { comment, index, deleteComment } = this.props
     if (window.confirm(`Are you sure to delete ${comment.user}'s comment?`)) {
-      deleteComments(index)
+      deleteComment(index)
     }
   }
 
@@ -32,7 +32,7 @@ class CommentItem extends React.Component {
 CommentItem.propTypes = {
   comment: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
-  deleteComments: PropTypes.func.isRequired
+  deleteComment: PropTypes.func.isRequired
 }
 
 export default CommentItem
