@@ -9,7 +9,7 @@ const comments = (state = initComments, action) => {
     case ADD_COMMENT:
       return [action.data, ...state];
     case DELETE_COMMENT:
-      return state.filter(index => index !== action.data);
+      return state.filter((comment, index) => index !== action.data);
     default:
       return state;
   }
