@@ -1,9 +1,12 @@
 body {
-  background-color: #f6f6f6 !important;
+  background-color: #f6f6f6;
+}
+
+Button {
+  float: right;
 }
 
 .header {
-  overflow: hidden;
   height: 5rem;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
@@ -14,18 +17,18 @@ body {
 }
 
 .comment-main {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
 }
 
 .comment-left {
-  padding: 0.3rem;
-  border-radius: 0.3rem;
+  padding: .5rem;
+  border-radius: .5rem;
   background-color: #fff;
 }
 
 .comment-right {
-  padding: 0.3rem;
-  margin-left: 0.5rem;
-  border-radius: 0.3rem;
+  padding: .5rem;
+  margin-left: .5rem;
+  border-radius: .5rem;
   background-color: #fff;
 }

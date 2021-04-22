@@ -6,13 +6,8 @@
   list-style: none;
 }
 
-.comment-item-user {
+.item-user {
   font-size: 1.2rem;
-}
-
-.comment-item Button {
-  position: absolute;
-  right: 0;
 }
 
 .comment-item p {
